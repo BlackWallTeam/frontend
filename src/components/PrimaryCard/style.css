@@ -1,0 +1,9 @@
+.ch-b__text{
+    display: flex;
+    gap: 10px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}

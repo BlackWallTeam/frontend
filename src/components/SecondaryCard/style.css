@@ -1,0 +1,16 @@
+.sec__container{
+    display: flex;
+    flex-direction: column;
+}
+.stat-item{
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.colored{
+    background-color: red;
+    width: 10px;
+    height: 10px;
+    border-radius: 1000px;
+}
