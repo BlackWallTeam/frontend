@@ -29,6 +29,12 @@ export const SecondaryCard: react.FC<ISecondaryCard> = (props) => {
                 </Typography.Link>
             </div>
             <Typography.Text>
+                Предсказанная цена: <strong style={{fontWeight: 'bold'}}>{props.pred_price.toFixed(0)} р</strong>
+            </Typography.Text>
+            <Typography.Text>
+                Процент отклонения: <strong style={{fontWeight: 'bold'}}>{(props.diff * -1).toFixed(1)}%</strong>
+            </Typography.Text>
+            <Typography.Text>
                 Этаж: <strong>{props.floor}</strong>
             </Typography.Text>
             <Typography.Text>
@@ -40,12 +46,8 @@ export const SecondaryCard: react.FC<ISecondaryCard> = (props) => {
             <Typography.Text>
                 Год постройки: <strong>{props.year_of_construction} г.</strong>
             </Typography.Text>
-            <Typography.Text>
-                Предсказанная цена: <strong>{props.pred_price.toFixed(0)} р</strong>
-            </Typography.Text>
-            <Typography.Text>
-                Процент отклонения: <strong>{(props.diff * -1).toFixed(1)}%</strong>
-            </Typography.Text>
+
+
         </div>
 
     </Card>

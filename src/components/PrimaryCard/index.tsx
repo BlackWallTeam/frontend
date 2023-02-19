@@ -45,20 +45,22 @@ export const PrimaryCard: react.FC<IPrimaryCard> = (props) => {
                 <Typography.Text>Шорт</Typography.Text>
             </div>
             <Typography.Text>
+                Рекомендация: <strong style={{color: deal_text(props.risk)?.color as any}}>
+                    {deal_text(props.risk)?.status}
+                </strong>
+            </Typography.Text>
+            <Typography.Text>Предполагаемая прибыль <strong style={{fontWeight: 'bold'}}>{props.increase_procent}%</strong></Typography.Text>
+            <Typography.Text>Ждать прибыли: <strong style={{fontWeight: 'bold'}}>{props.days_for_increase} дней (дня)</strong></Typography.Text>
+            <Typography.Text>
                 Застрощик: <strong>{props.developer}</strong>
             </Typography.Text>
             <Typography.Text>
                 Дней до сдачи: <strong>{props.days_to_be_done}</strong>
             </Typography.Text>
-            <Typography.Text>
-                Рекомендация: <strong style={{color: deal_text(props.risk)?.color as any}}>
-                    {deal_text(props.risk)?.status}
-                </strong>
-            </Typography.Text>
-            <Typography.Text>Предполагаемая прибыль <strong>{props.increase_procent}%</strong></Typography.Text>
+            
+            
             <Typography.Text>Этаж: <strong>{props.floor}</strong></Typography.Text>
             <Typography.Text>Площадь: <strong>{props.area} кв.м</strong></Typography.Text>
-            <Typography.Text>Ждать прибыли: <strong>{props.days_for_increase} дней (дня)</strong></Typography.Text>
             <CardChart data={mapped_price} days={mapped_days}/>
         </div>
     </Card>
